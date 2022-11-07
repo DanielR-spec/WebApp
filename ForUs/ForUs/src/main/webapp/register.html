@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Registro</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="cssRg/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="testbox">
+      <h1>Registro</h1>
+
+      <form action="AddUsr" method="POST" id="my_form_reg">
+          <label id="icon" for="name"><i class="icon-user"></i></label>
+          <input
+            type="text"
+            name="nombres"
+            id="nombres"
+            placeholder="Escriba sus nombres"
+            required
+          />
+          <label id="icon" for="name"><i class="icon-user"></i></label>
+          <input
+            type="text"
+            name="apellidos"
+            id="apellidos"
+            placeholder="Escriba sus apellidos"
+            required
+          />
+          <label id="icon" for="name"><i class="icon-mobile-phone"></i></label>
+          <input
+            type="text"
+            name="cell"
+            id="cell"
+            placeholder="Escriba su telefono"
+            required
+          />
+          <label id="icon" for="name"><i class="icon-home"></i></label>
+          <input
+            type="text"
+            name="direccion"
+            id="direccion"
+            placeholder="Escriba su direccion"
+            required
+          />
+          <label id="icon" for="name"><i class="icon-home"></i></label>
+          <input
+            type="text"
+            name="ciudad"
+            id="ciudad"
+            placeholder="Escriba su ciudad"
+            required
+          />
+          <label id="icon" for="name"><i class="icon-info"></i></label>
+          <input
+            type="text"
+            name="doc"
+            id="doc"
+            placeholder="Escriba su NIT"
+            required
+            maxlength="10"
+          />
+          <label id="icon" for="name"><i class="icon-envelope"></i></label>
+          <input
+            type="text"
+            name="correo"
+            id="correo"
+            placeholder="Escriba su correo"
+            required
+          />
+          <label id="icon" for="name"><i class="icon-shield"></i></label>
+          <input
+            type="password"
+            name="clave"
+            id="clave"
+            placeholder="Escriba su contrasena"
+            required
+          />
+          <div class="gender">
+           	<p>
+            	<input type="checkbox" id="cbox1" value="first_checkbox" />
+            	Seleccionando esta opcion, esta aceptando a nuestros
+            	<a href="#">terminos y servicios</a>.
+            </p>
+         
+         	<button class="button">Registro</button>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+/**
+ * 
+ */
+package com.controller.ptr;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputFilter.Config;
+import java.net.http.HttpClient;
+
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.UriBuilder;
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+
+/**
+ * @author danie
+ *
+ */
+public class LocalizadorSrv {
+
+	/**
+	 * 
+	 */
+	public LocalizadorSrv() {
+		// TODO Auto-generated constructor stub
+	}
+
+public String getUser (String usr, String pss) throws IOException {
+	
+    //URL url = new URL("http://localhost:9080/ApiEndpoint/rest/user/auth");//your url i.e fetch data from .
+    
+	URL url = new URL("https://jsonplaceholder.typicode.com/posts/1");//your url i.e fetch data from .
+	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+    conn.setRequestMethod("GET");
+    if (conn.getResponseCode() != 200) {
+        throw new RuntimeException("Failed : HTTP Error code dick: "
+                + conn.getResponseCode());
+    }
+    InputStreamReader in = new InputStreamReader(conn.getInputStream());
+    BufferedReader br = new BufferedReader(in);
+    String output;
+    
+    
+    while ((output = br.readLine()) != null) {
+        System.out.println(output);
+        
+    }
+    conn.disconnect();
+    return "Respuesta del server: " + output;
+	
+//	try {
+//
+//        URL url = new URL("http://localhost:9080/ApiEndpoint/rest/user/test");//your url i.e fetch data from .
+//        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//        conn.setRequestMethod("GET");
+//        if (conn.getResponseCode() != 200) {
+//            throw new RuntimeException("Failed : HTTP Error code dick: "
+//                    + conn.getResponseCode());
+//        }
+//        InputStreamReader in = new InputStreamReader(conn.getInputStream());
+//        BufferedReader br = new BufferedReader(in);
+//        String output,temp;
+//        while ((output = br.readLine()) != null) {
+//            System.out.println(output);
+//        }
+//        temp = output;
+//        conn.disconnect();
+//        return "Respuesta del server: " + temp;
+//
+//    } catch (Exception e) {
+//        System.out.println("Exception in NetClientGet:- " + e);
+//    }
+	}  
+
+	
+		
+//		ClientConfig config = new ClientConfig();
+//		Client client = ClientBuilder.newClient(config);
+//		WebTarget target = client.target(getBaseURI()).queryParam("user", usr).queryParam("psswr", pss);
+//		
+//		String response = target.request().accept(MediaType.TEXT_PLAIN).get(String.class);
+//			
+//		return response;
+		
+		//WebTarget target = null;
+		
+        //String response = target.path("hola").path("mundo").request().acceptLanguage(MediaType.TEXT_PLAIN).get(Response.class).toString();
+        
+        //System.out.println(response);
+
+		
+       // String plainAnswer =target.path("rest").path("hello").request().acceptLanguage(MediaType.TEXT_PLAIN).get(String.class);
+       // String xmlAnswer =target.path("rest").path("hello").request().acceptLanguage(MediaType.TEXT_XML).get(String.class);
+       // String htmlAnswer=target.path("rest").path("hello").request().acceptLanguage(MediaType.TEXT_HTML).get(String.class);
+
+       // System.out.println(plainAnswer);
+       // System.out.println(xmlAnswer);
+       // System.out.println(htmlAnswer);  
+
+	
+	
+	public Boolean test() {
+		return true;
+	}
+}

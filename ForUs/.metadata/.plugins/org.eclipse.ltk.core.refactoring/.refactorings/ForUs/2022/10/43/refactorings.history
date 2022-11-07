@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.user.ptr.AddUSr&apos; to &apos;AddUsr&apos;&#x0D;&#x0A;- Original project: &apos;ForUs&apos;&#x0D;&#x0A;- Original element: &apos;com.user.ptr.AddUSr&apos;&#x0D;&#x0A;- Renamed element: &apos;com.user.ptr.AddUsr&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AddUSr&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.user.ptr{AddUSr.java[AddUSr" matchStrategy="1" name="AddUsr" qualified="false" references="true" similarDeclarations="false" stamp="1665981914806" textual="false" version="1.0"/>
+</session>

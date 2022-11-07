@@ -1,0 +1,94 @@
+package com.controller.ptr;
+
+import java.io.IOException;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class CrtlUpdDona
+ */
+@WebServlet("/CrtlUpdDona")
+public class CrtlUpdDona extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public CrtlUpdDona() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+		System.out.println("===Acceso al servlet controlador de User Update===");
+		System.out.println("Invocación al método INIT del Servlet Update");
+		super.init(config);
+	}
+	/**
+	 * @see Servlet#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+		System.out.println("Invocación al método DESTROY del Servlet");
+		super.destroy();
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Invocación al método SERVICE del Servlet ctrlUpd");
+		
+		LocalizadorSrvDona localizadorSrv = new LocalizadorSrvDona();
+		request.setAttribute("Lcz", localizadorSrv);
+		
+		super.service(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		LocalizadorSrvDona localizadorSrv = (LocalizadorSrvDona) request.getAttribute("Lcz");
+		
+		String idDonaBack = request.getParameter("idDonaBack");
+		String res = localizadorSrv.updDona(idDonaBack,"En proceso");
+		
+		if(res!=null) {
+
+			System.out.println("respuesta: " + res);
+			
+			response.sendRedirect("dona.html");
+		}
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
+	 */
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+}

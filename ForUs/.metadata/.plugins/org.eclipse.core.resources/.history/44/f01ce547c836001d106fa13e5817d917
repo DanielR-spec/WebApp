@@ -1,0 +1,263 @@
+package com.user.ptr;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Parameter;
+import java.util.Enumeration;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Usuario
+ */
+
+@WebServlet(urlPatterns = { "/UsuarioSrv" }, initParams = { @WebInitParam(name = "variable1", value = "valor1") })
+public class UsuarioSrv extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	private static final String CONTENT_TYPE = "text/html; charset=windows-1252";
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public UsuarioSrv() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// super.doDelete(req, resp);
+	}
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.service(req, resp);
+
+		System.out.println("Invocación al método SERVICE del Servlet");
+
+		// PROBAR SERVLET...
+
+//		ServletContext servletContext = this.getServletContext();
+//		@SuppressWarnings("rawtypes")
+//		Enumeration attributes = servletContext.getAttributeNames(); 
+//		while (attributes.hasMoreElements()) {
+//			String attribute = (String) attributes.nextElement(); 
+//			System.out.println("Attribute name : " + attribute); 
+//			System.out.println("Attribute value : " + 
+//					servletContext.getAttribute(attribute)); 
+//		} 
+//		System.out.println("Major version : " + servletContext.getMajorVersion()); 
+//		System.out.println("Minor version : " + servletContext.getMinorVersion()); 
+//		System.out.println("Server info : " + servletContext.getServerInfo()); 
+
+	}
+
+	@Override
+	public ServletContext getServletContext() {
+		// TODO Auto-generated method stub
+		return super.getServletContext();
+	}
+
+	@Override
+	public String getInitParameter(String name) {
+		// TODO Auto-generated method stub
+		return super.getInitParameter(name);
+	}
+
+	@Override
+	public ServletConfig getServletConfig() {
+		// TODO Auto-generated method stub
+		return super.getServletConfig();
+	}
+
+	@Override
+	public String getServletInfo() {
+		// TODO Auto-generated method stub
+		return super.getServletInfo();
+	}
+
+	@Override
+	public Enumeration<String> getInitParameterNames() {
+		// TODO Auto-generated method stub
+		return super.getInitParameterNames();
+	}
+
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+
+		super.init(config);
+
+		System.out.println("Invocación al método INIT del Servlet");
+
+//		System.out.println("Parametros iniciales");
+//		@SuppressWarnings("rawtypes")
+//		Enumeration parameters = config.getInitParameterNames();
+//
+//		while (parameters.hasMoreElements()) {
+//			String parameter = (String) parameters.nextElement();
+//			System.out.println("Parametro nombre : " + parameter);
+//			System.out.println("Parametro valor : " + config.getInitParameter(parameter));
+//
+//		}
+
+//		System.out.println("REGISTRAR DATOS COMPARTIDOS");
+//		ServletContext servletContext = config.getServletContext(); 
+//		servletContext.setAttribute("password", "dingdong"); 
+	}
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		System.out.println("Invocación al método DESTROY del Servlet");
+		// super.destroy();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at perra: ").append(request.getContextPath());
+//		response.setContentType(CONTENT_TYPE);
+//		PrintWriter out = response.getWriter();
+//		out.println("<HTML>");
+//		out.println("<HEAD>");
+//		out.println("<TITLE>El método GET</TITLE>");
+//		out.println("</HEAD>");
+//		out.println("<BODY>");
+//		out.println("Se ha recibido una solicitud de tipo GET.");
+//		out.println("Presione el botón.");
+//		out.println("<BR>");
+////		out.println("<FORM METHOD=POST>");
+////		out.println("<INPUT TYPE=SUBMIT VALUE=Submit>");
+//		out.println("<FORM ACTION=/ForUs/Usuario METHOD=POST>"); 
+//		out.println("<BR><BR> ");
+//		out.println("Autor: <INPUT TYPE=\"TEXT\" NAME=\"Autor\">"); 
+//		out.println("<INPUT TYPE=\"SUBMIT\" NAME=\"Submit\">"); 
+//		out.println("<INPUT TYPE=\"RESET\" VALUE=\"Reset\">"); 
+//		out.println("</FORM>");
+//		out.println("</FORM>");
+//		out.println("</BODY>");
+//		out.println("</HTML>");
+//		String userName = request.getParameter("username");
+//		String password = request.getParameter("pass");
+//		System.out.println("Acceso al Srv User");
+//
+//		if (userName != null && password != null) {
+//			RequestDispatcher rd = request.getRequestDispatcher("ControladorSrv");
+//			rd.forward(request, response);
+//			//sendLoginForm(response, true);
+//
+//		} else {
+//			sendLoginForm(response, true);
+//		}
+		
+		//TOCA CREAAR OTRO SERVLET PARA CADA SERVICIO!!!! IMPORTANTE!!!
+		System.out.println("Acceso al Srv User");
+			
+		if(true) {
+			RequestDispatcher rd = request.getRequestDispatcher("ControladorSrv");
+			rd.forward(request, response);
+		}
+	}
+		
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+
+		doGet(request, response);
+		// TODO Auto-generated method stub
+//		response.setContentType(CONTENT_TYPE);
+//		PrintWriter out = response.getWriter();
+//		out.println("<HTML>"); 
+//		out.println("<HEAD>"); 
+//		out.println("<TITLE>El método POST</TITLE>"); 
+//		out.println("</HEAD>"); 
+//		out.println("<BODY>"); 
+//		out.println("El servlet ha recibido una solicitud POST."); 
+//		out.println("</BODY>"); 
+//		out.println("</HTML>"); 
+
+//		out.println("<HTML>");
+//		out.println("<HEAD>");
+//		out.println("<TITLE>");
+//		out.println("HttpServletRequest");
+//		out.println("</TITLE>");
+//		out.println("</HEAD>");
+//		out.println("<BODY>");
+//		out.println("<B>Demostración del objeto HttpServletRequest</B>");
+//		out.println("<BR>");
+//		out.println("<BR>Server Port: " + request.getServerPort());
+//		out.println("<BR>Server Name: " + request.getServerName());
+//		out.println("<BR>Protocol: " + request.getProtocol());
+//		out.println("<BR>Character Encoding: " + request.getCharacterEncoding());
+//		out.println("<BR>Content Type: " + request.getContentType());
+//		out.println("<BR>Content Length: " + request.getContentLength());
+//		out.println("<BR>Remote Address: " + request.getRemoteAddr());
+//		out.println("<BR>Remote Host: " + request.getRemoteHost());
+//		out.println("<BR>Scheme: " + request.getScheme());
+//		
+//		Enumeration parameters = request.getParameterNames();
+//		while (parameters.hasMoreElements()) {
+//			String parameterName = (String) parameters.nextElement();
+//			out.println("<br>Parameter Name: " + parameterName);
+//			out.println("<br>Parameter Value: " + request.getParameter(parameterName));
+//		}
+//		Enumeration attributes = request.getAttributeNames();
+//		
+//		while (attributes.hasMoreElements()) {
+//			String attribute = (String) attributes.nextElement();
+//			out.println("<BR>Attribute name: " + attribute);
+//			out.println("<BR>Attribute value: " + request.getAttribute(attribute));
+//		}
+//		out.println("</BODY>");
+//		out.println("</HTML>");
+		
+		//destroy();
+
+
+	}
+	
+	private void sendLoginForm(HttpServletResponse response, boolean withErrorMessage)
+			throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<HTML>");
+		out.println("<HEAD>");
+		out.println("<TITLE>Login</TITLE>");
+		out.println("</HEAD>");
+		out.println("<BODY>");
+		if (withErrorMessage) {
+			out.println("Login failed. Please try again.<BR>");}
+		out.println("<BR>");
+		out.println("<BR>Please enter your user name and password.");
+		out.println("<BR><FORM METHOD=POST>");
+		out.println("<BR>User Name: <INPUT TYPE=TEXT NAME=userName>");
+		out.println("<BR>Password: <INPUT TYPE=PASSWORD NAME=password>");
+		out.println("<BR><INPUT TYPE=SUBMIT VALUE=Submit>");
+		out.println("</FORM>");
+		out.println("</BODY>");
+		out.println("</HTML>");
+	}
+
+}

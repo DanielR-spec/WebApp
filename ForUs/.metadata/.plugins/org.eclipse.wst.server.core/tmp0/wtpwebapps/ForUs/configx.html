@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>
+      Dashboard
+    </title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assetsDsh/img/favicon/favicon.ico"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="assetsDsh/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link
+      rel="stylesheet"
+      href="assetsDsh/vendor/css/core.css"
+      class="template-customizer-core-css"
+    />
+    <link
+      rel="stylesheet"
+      href="assetsDsh/vendor/css/theme-default.css"
+      class="template-customizer-theme-css"
+    />
+    <link rel="stylesheet" href="assetsDsh/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link
+      rel="stylesheet"
+      href="assetsDsh/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="assetsDsh/vendor/libs/apex-charts/apex-charts.css"
+    />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="assetsDsh/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assetsDsh/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="content-wrapper">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Configuracion de cuenta /</span> Cuenta</h4>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Informacion de cuenta</h5>
+                    <!-- Account -->
+                   
+                    <hr class="my-0" />
+                    <div class="card-body">
+                      <form action="UpdateUsr" id="formAccountSettings" method="PUT">
+                        <div class="row">
+                          <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">Nombres</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="nombres"
+                              name="nombres"
+                              autofocus
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">Apellidos</label>
+                            <input 
+                            class="form-control" 
+                            type="text" 
+                            name="apellidos" 
+                            id="apellidos"
+                             />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label">Correo electronico</label>
+                            <input
+                              class="form-control"
+                              type="text"
+                              id="correo"
+                              name="correo"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="clave" class="form-label">Clave</label>
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="clave"
+                              name="clave"
+                            />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="phoneNumber">Telefono</label>
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text">COL (+57)</span>
+                              <input
+                                type="text"
+                                id="cell"
+                                name="cell"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="doc" class="form-label">Doc</label>
+                            <input type="text" class="form-control" id="doc" name="doc" />
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="xxx" />
+                          </div>
+                          </div>
+                          <div class="mb-3 col-md-6">
+                            <label class="form-label" for="country">Pais</label>
+                            <select id="country" class="select2 form-select">
+                              <option value="">Select</option>
+                              <option value="Colombia">Colombia</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="mt-2">
+                          <button type="submit" class="btn btn-primary me-2">Guardar cambios</button>
+                          <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /Account -->
+                  </div>
+                  <div class="card">
+                    <h5 class="card-header">Eliminar cuenta</h5>
+                    <div class="card-body">
+                      <div class="mb-3 col-12 mb-0">
+                        <div class="alert alert-warning">
+                          <h6 class="alert-heading fw-bold mb-1">Seguro que desea eliminar la cuenta?</h6>
+                          <p class="mb-0">Una vez se elimine la cuenta, no se podra recuperar.</p>
+                        </div>
+                      </div>
+                      <form action="DeleteUsr" id="formAccountDeactivation" method="post">
+                        <div class="form-check mb-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="accountActivation"
+                            id="accountActivation"
+                          />
+                          <label class="form-check-label" for="accountActivation"
+                            >Confirmo la cancelacion de mi cuenta</label
+                          >
+                        </div>
+                        <button type="submit" class="btn btn-danger deactivate-account">Desactivar Cuenta</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- / Content -->
+
+            <!-- Footer -->
+
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="assetsDsh/vendor/libs/jquery/jquery.js"></script>
+    <script src="assetsDsh/vendor/libs/popper/popper.js"></script>
+    <script src="assetsDsh/vendor/js/bootstrap.js"></script>
+    <script src="jsDona/regs.js"></script>
+    <script src="assetsDsh/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="assetsDsh/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="assetsDsh/vendor/libs/apex-charts/apexcharts.js"></script>
+
+    <!-- Main JS -->
+    <script src="assetsDsh/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="assetsDsh/js/dashboards-analytics.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

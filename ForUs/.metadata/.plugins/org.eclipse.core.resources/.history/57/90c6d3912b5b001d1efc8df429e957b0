@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Basic -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <!-- Site Metas -->
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <link rel="shortcut icon" href="imgIdx/lgCb.png" type="">
+      <title>ForUs</title>
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" type="text/css" href="cssIdx/bootstrap.css" />
+      <!-- font awesome style -->
+      <link href="cssIdx/font-awesome.min.css" rel="stylesheet" />
+      <!-- Custom styles for this template -->
+      <link href="cssIdx/style.css" rel="stylesheet" />
+      <!-- responsive style -->
+      <link href="cssIdx/responsive.css" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="hero_area">
+         <!-- header section strats -->
+         <header class="header_section">
+            <div class="container">
+               <nav class="navbar navbar-expand-lg custom_nav-container ">
+                  <a class="navbar-brand" href="index.html"><img height="30" src="imgIdx/logoHed.png" alt="#" /></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#section2">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="login.html">Login</a>
+                        </li>                   
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+         </header>
+         <!-- end header section -->
+         <!-- slider section -->
+         <section class="slider_section ">
+            <div class="slider_bg_box">
+               <img src="imgIdx/pgIni.jpg"alt="">
+            </div>
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container ">
+                        <div class="row">
+                           <div class="col-md-7 col-lg-6 ">
+                              <div class="detail-box">
+                                 <h1>
+                                    <span>
+                                       La moda rapida no <br/>es gratis. 
+                                    </span>
+                                    <br>
+                                    El medio ambiente esta pagando.
+                                 </h1>
+                                 <p>
+									Regala las prendas que ya no usas, ayuda<br/> al medio ambiente y juntos luchemos<br/> contra la contaminación de la industria textil.<br>
+                                 </p>
+                                 <div>
+                                 <a  style="width:230px; margin-left: -30px; margin-top: 20px;" href="https://play.google.com/store/apps/details?id=com.roblox.client&hl=es_CO&gl=US">	
+                                    <img  src="imgIdx/GPlay.png" style="width:230px; margin-left: -20px; margin-top: 20px;">
+                                 </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- end slider section -->
+      </div>
+      <!-- why section -->
+      <section class="why_section layout_padding">
+         <div class="container">
+            <div class="heading_container heading_center" id="section2">
+               <h2>
+                  Servicios
+               </h2>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="box ">
+                     <div class="img-box">
+                        <img src="imgIdx/fund.png" width="100"/>
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Para Fundaciones
+                        </h5>
+                        <p>
+                           Recibe y administra donaciones de ropa desde la pagina web en cualquier lugar del pais
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box ">
+                     <div class="img-box">
+                        <img src="imgIdx/free.png" width="100"/>
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Gratis
+                        </h5>
+                        <p>
+                           Usar nuestros servicios no presenta nigun costo y nunca lo hará
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box ">
+                     <div class="img-box">
+                        <img src="imgIdx/app.png" width="100"/>
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           App personas
+                        </h5>
+                        <p>
+                           Administra tu closet y realiza donaciones de prendas desde la comodidad de tu casa
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end why section -->
+      
+      <!-- arrival section -->
+      <section class="arrival_section">
+         <div class="container">
+            <div class="box">
+               <div class="arrival_bg_box">
+                  <img src="imgIdx/sec3.png" alt="">
+               </div>
+               <div class="row">
+                  <div class="col-md-6 ml-auto">
+                     <div class="heading_container remove_line_bt">
+                        <h2>
+                           Moda Rapida & Contaminación
+                        </h2>
+                     </div>
+                     <p style="margin-top: 30px;margin-bottom: 40px;">
+                        La falta de medios para reciclar las toneladas de ropa que se producen al año ha contribuido a que rios, vertederos y hasta el oceano esten repletlos de ropa, zapatos y otros productos textiles que consumimos inconscientemente.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end arrival section -->
+   
+      <!-- footer start -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                   <div class="full">
+                      <div class="logo_footer">
+                        <a href="#"><img width="80" src="imgIdx/logoHed.png" alt="#" /></a>
+                      </div>
+                      <div class="information_f">
+                        <p><strong>DIRECCION:</strong> Ak. 29 #39a - 23, Bogotá</p>
+                        <p><strong>TTELEFONO:</strong> +57 318 7706 750</p>
+                        <p><strong>EMAIL:</strong> forus@gmail.com</p>
+                      </div>
+                   </div>
+               </div>
+               <div class="col-md-8">
+                  <div class="row">
+                  <div class="col-md-7">
+                     <div class="row">
+                        <div class="col-md-6">
+                     <div class="widget_menu">
+                        <h3>Menu</h3>
+                        <ul>
+                           <li><a href="index.html">Inicio</a></li>
+                           <li><a href="about.html">Sobre Nosotros</a></li>
+                           <li><a href="#section2">Servicios</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="widget_menu">
+                        <h3>Account</h3>
+                        <ul>
+                           <li><a href="login.html">Login</a></li>
+                           <li><a href="register.html">Registro</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                     </div>
+                  </div>     
+                  <div class="col-md-5">
+                     <div class="widget_menu">
+                        <h3>Boletin</h3>
+                        <div class="information_f">
+                          <p>Suscríbase a nuestro boletín de noticias y reciba información actualizada sobre los eventos.</p>
+                        </div>
+                        <div class="form_sub">
+                           <form>
+                              <fieldset>
+                                 <div class="field">
+                                    <input type="email" placeholder="Introduzca su correo" name="email" />
+                                    <input type="submit" value="Suscríbase" />
+                                 </div>
+                              </fieldset>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- footer end -->
+      <div class="cpy_">
+         <p>© 2022 All Rights Reserved By <a href="https://github.com/DanielR-spec">Daniel R.</a></p>
+      </div>
+      <!-- jQery -->
+      <script src="js2/jquery-3.4.1.min.js"></script>
+      <!-- popper js -->
+      <script src="js2/popper.min.js"></script>
+      <!-- bootstrap js -->
+      <script src="js2/bootstrap.js"></script>
+      <!-- custom js -->
+      <script src="js2/custom.js"></script>
+   </body>
+</html>
